@@ -175,7 +175,7 @@ export default function OrbitingSkills({ profileImage }) {
         ))}
 
         {/* Stars Background */}
-        <Stars radius={50} depth={50} count={2000} factor={4} saturation={0} fade speed={1} />
+        <Stars radius={30} depth={30} count={800} factor={2} saturation={0} fade speed={1} />
 
         {/* Controls */}
         <OrbitControls

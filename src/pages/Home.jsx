@@ -31,7 +31,7 @@ const Home = () => {
   const [charIndex, setCharIndex] = useState(0);
 
   const words = ['Mobile Development', 'UI/UX Enthusiast', 'Problem Solver'];
-  const techStack = ['HTML', 'CSS', 'Java', 'JavaScript', 'PHP', 'C#', 'Android'];
+  const techStack = ['HTML', 'CSS', 'Java', 'JavaScript', 'PHP', 'C#', 'React Native', 'Kotlin', 'Flutter', 'Android'];
 
   useEffect(() => {
     AOS.init({
@@ -102,7 +102,7 @@ const Home = () => {
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight"
             >
               <br />
-              <span className="gradient-text">Kyaw Shein(Junior)</span>
+              <span className="gradient-text">Kyaw Shein</span>
             </motion.h1>
 
             <motion.div
@@ -123,8 +123,9 @@ const Home = () => {
               transition={{ duration: 0.6, delay: 0.6 }}
               className="text-base md:text-lg text-gray-400 max-w-xl mx-auto lg:mx-0"
             >
-              I have completed several projects using HTML, CSS, Java, JavaScript, PHP, C#, and Android development.
-              My experience includes developing professional web applications, websites, and mobile apps with a focus on functionality and design.
+              I have completed several projects using HTML, CSS, Java, JavaScript, PHP, Reactive Native, Kotlin, C#, Flutter and Android development.
+              I build mobile and web applications with a focus on clean design and real-world functionality.
+              Currently specializing in Flutter and mobile development.
 
             </motion.p>
 

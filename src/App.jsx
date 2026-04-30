@@ -14,6 +14,12 @@ const Contact = lazy(() => import('./pages/Contact'));
 const ProjectDetail = lazy(() => import('./pages/ProjectDetail'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
+// Lazy load heavy 3D components
+const AnimatedSphere = lazy(() => import('./components/AnimatedSphere'));
+const AnimatedSolarSystem = lazy(() => import('./components/AnimatedSolarSystem'));
+const AnimatedEarth = lazy(() => import('./components/AnimatedEarth'));
+const OrbitingSkills = lazy(() => import('./components/OrbitingSkills'));
+
 const LandingPage = ({ showWelcome, setShowWelcome }) => {
   return (
     <>

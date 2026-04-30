@@ -130,8 +130,8 @@ export default function AnimatedSphere() {
         
         {/* 3D Objects */}
         <AnimatedShape />
-        <Particles count={150} />
-        <Stars radius={50} depth={50} count={1000} factor={4} saturation={0} fade speed={1} />
+        <Particles count={50} />
+        <Stars radius={30} depth={30} count={500} factor={2} saturation={0} fade speed={1} />
         
         {/* Controls */}
         <OrbitControls

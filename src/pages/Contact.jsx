@@ -134,10 +134,17 @@ const Contact = () => {
 
   const fetchComments = async () => {
     try {
-      const { data, error } = await supabase
+      // Add timeout to prevent function timeout
+      const timeoutPromise = new Promise((_, reject) => 
+        setTimeout(() => reject(new Error('Request timeout')), 10000)
+      );
+      
+      const fetchPromise = supabase
         .from('comments')
         .select('*')
         .order('created_at', { ascending: false });
+
+      const { data, error } = await Promise.race([fetchPromise, timeoutPromise]);
 
       if (error) throw error;
       setComments(data || []);
@@ -212,40 +219,57 @@ const Contact = () => {
     try {
       let photoUrl = null;
 
-      // Upload photo to Supabase Storage if provided
+      // Upload photo to Supabase Storage if provided (with timeout)
       if (formData.photo) {
         const fileExt = formData.photo.name.split('.').pop();
         const fileName = `${Date.now()}-${Math.random().toString(36).substring(7)}.${fileExt}`;
         const filePath = `comment-photos/${fileName}`;
 
-        const { data: uploadData, error: uploadError } = await supabase.storage
-          .from('Portfolio')
-          .upload(filePath, formData.photo);
+        const uploadTimeout = new Promise((_, reject) => 
+          setTimeout(() => reject(new Error('Upload timeout')), 15000)
+        );
 
-        if (uploadError) {
-          console.error('Upload error:', uploadError);
-          // Continue without photo if upload fails
-        } else {
-          // Get public URL
-          const { data: urlData } = supabase.storage
-            .from('Portfolio')
-            .getPublicUrl(filePath);
-          photoUrl = urlData.publicUrl;
+        try {
+          const { data: uploadData, error: uploadError } = await Promise.race([
+            supabase.storage.from('Portfolio').upload(filePath, formData.photo),
+            uploadTimeout
+          ]);
+
+          if (uploadError) {
+            console.error('Upload error:', uploadError);
+            // Continue without photo if upload fails
+          } else {
+            // Get public URL
+            const { data: urlData } = supabase.storage
+              .from('Portfolio')
+              .getPublicUrl(filePath);
+            photoUrl = urlData.publicUrl;
+          }
+        } catch (uploadError) {
+          console.error('Upload timeout or error:', uploadError);
+          // Continue without photo
         }
       }
 
-      // Insert comment into database
-      const { data, error } = await supabase
-        .from('comments')
-        .insert([
-          {
-            Name: formData.name,
-            Email: formData.email,
-            Comment: formData.comment,
-            Photo: photoUrl,
-          },
-        ])
-        .select();
+      // Insert comment into database (with timeout)
+      const insertTimeout = new Promise((_, reject) => 
+        setTimeout(() => reject(new Error('Database timeout')), 10000)
+      );
+
+      const { data, error } = await Promise.race([
+        supabase
+          .from('comments')
+          .insert([
+            {
+              Name: formData.name,
+              Email: formData.email,
+              Comment: formData.comment,
+              Photo: photoUrl,
+            },
+          ])
+          .select(),
+        insertTimeout
+      ]);
 
       if (error) throw error;
 

@@ -444,7 +444,7 @@ export default function AnimatedSolarSystem({ onEarthClick }) {
         <BlackHole position={[12, -3, 10]} />
         
         {/* Stars */}
-        <Stars radius={50} depth={50} count={3000} factor={4} saturation={0} fade speed={1} />
+        <Stars radius={30} depth={30} count={1000} factor={2} saturation={0} fade speed={1} />
         
         {/* Controls */}
         <OrbitControls

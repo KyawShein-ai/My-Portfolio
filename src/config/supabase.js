@@ -20,4 +20,12 @@ export const supabase = createClient(supabaseUrl, supabaseKey, {
       eventsPerSecond: 2,
     },
   },
+  global: {
+    headers: {
+      'X-Client-Info': 'my-portfolio@1.0.0',
+    },
+  },
+  db: {
+    schema: 'public',
+  },
 });
