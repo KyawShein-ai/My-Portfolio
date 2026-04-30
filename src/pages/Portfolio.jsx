@@ -104,10 +104,14 @@ const techStacks = [
   { icon: 'java.svg', language: 'Java' },
   { icon: 'mysql.svg', language: 'MySQL' },
   { icon: 'xampp.svg', language: 'XAMPP' },
-  { icon: 'github.svg', language: 'GitHUB' },
+  { icon: 'github.svg', language: 'GitHub' },
   { icon: 'git.svg', language: 'Git' },
   { icon: 'flutter.svg', language: 'Flutter' },
   { icon: 'kotlin.svg', language: 'Kotlin' },
+  { icon: 'supabase.svg', language: 'Supabase' },
+  { icon: 'firebase.svg', language: 'Firebase' },
+  { icon: 'vercel.svg', language: 'Vercel' },
+  { icon: 'mongodb.svg', language: 'MongoDB' },
 ];
 
 const TechStackCard = memo(({ stack }) => (
