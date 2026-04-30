@@ -174,8 +174,8 @@ const Home = () => {
               transition={{ duration: 0.6, delay: 1.2 }}
               className="flex gap-4 justify-center lg:justify-start pt-4"
             >
-              <SocialLink icon={Github} href="https://github.com/KyawShein404" label="GitHub" />
-              <SocialLink icon={Linkedin} href="https://linkedin.com" label="LinkedIn" />
+              <SocialLink icon={Github} href="https://github.com/KyawShein-ai" label="GitHub" />
+              <SocialLink icon={Linkedin} href="https://www.linkedin.com/in/kyaw-shein-324598400/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BMEzaE%2FYCRYuj0PvnB%2BtNHA%3D%3D" label="LinkedIn" />
               <SocialLink icon={Mail} href="mailto:kyawshein8844@gmail.com" label="Email" />
             </motion.div>
           </div>

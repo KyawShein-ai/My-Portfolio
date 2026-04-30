@@ -448,8 +448,8 @@ const Contact = () => {
                 <SocialCard
                   icon={Linkedin}
                   platform="LinkedIn"
-                  username="on LinkedIn"
-                  href="https://linkedin.com/in/yourprofile"
+                  username="KYAW SHEIN"
+                  href="https://www.linkedin.com/in/kyaw-shein-324598400/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BtqpIyBWuTtyUZi5x91VNuw%3D%3D"
                   isPrimary={true}
                   iconColor="linkedin"
                 />
@@ -459,7 +459,7 @@ const Contact = () => {
                   icon={Instagram}
                   platform="Instagram"
                   username="CODY Shein"
-                  href="https://instagram.com/cody_shein"
+                  href="https://www.instagram.com/codyshein404?igsh=MWFiazQ1OW0wNHM4aw=="
                   isPrimary={false}
                   iconColor="instagram"
                 />
@@ -469,7 +469,7 @@ const Contact = () => {
                   icon={Youtube}
                   platform="Youtube"
                   username="Kyaw Shein"
-                  href="https://youtube.com/kyaw_shein"
+                  href="https://youtube.com/@kyawshein-xp5vk?si=sVznxf717eFRRVx_"
                   isPrimary={false}
                   iconColor="youtube"
                 />
@@ -478,8 +478,8 @@ const Contact = () => {
                 <SocialCard
                   icon={Github}
                   platform="Github"
-                  username="KyawShein404"
-                  href="https://github.com/KyawShein404"
+                  username="KyawShein-ai"
+                  href="https://github.com/KyawShein-ai"
                   isPrimary={false}
                   iconColor="github"
                 />
