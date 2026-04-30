@@ -86,11 +86,11 @@ const About = () => {
               Hello, I'm <span className="gradient-text">Kyaw Shein</span>
             </h3>
             <p className="text-gray-400 leading-relaxed">
-              I'm a fourth-year Computer Science student at the University of Computer Studies (Monywa), currently in my first semester.
-              I have experience building mobile and web applications using technologies such as HTML, CSS, Java, JavaScript, PHP, Reactive Native, Kotlin, C#, Flutter and Android development.
+            I'm a fourth-year Computer Science student at the University of Computer Studies (Monywa), currently in my  semester.
+            I have experience building mobile and web applications using technologies such as HTML, CSS, Java, JavaScript, PHP, Reactive Native, Kotlin, C#, Flutter and Android development.
             </p>
             <p className="text-gray-400 leading-relaxed">
-              Currently, I am focusing on Flutter to develop cross-platform mobile applications with clean UI and backend integration.
+             Currently, I am focusing on Flutter to develop cross-platform mobile applications with clean UI and backend integration.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <a href="https://drive.google.com/file/d/1_rVZ2nmf0d6CmL_i5GpI9Ich294tPsr7/view?usp=drivesdk" className="w-full lg:w-auto">
