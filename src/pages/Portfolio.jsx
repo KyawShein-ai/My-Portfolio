@@ -106,6 +106,8 @@ const techStacks = [
   { icon: 'xampp.svg', language: 'XAMPP' },
   { icon: 'github.svg', language: 'GitHUB' },
   { icon: 'git.svg', language: 'Git' },
+  { icon: 'flutter.svg', language: 'Flutter' },
+  { icon: 'kotlin.svg', language: 'Kotlin' },
 ];
 
 const TechStackCard = memo(({ stack }) => (
