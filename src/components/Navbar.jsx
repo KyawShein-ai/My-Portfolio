@@ -93,7 +93,7 @@ const Navbar = () => {
                                 backgroundClip: 'text'
                             }}
                         >
-                            KYANSHEIN(Junior)
+                            KYANSHEIN
                         </a>
                     </div>
         
