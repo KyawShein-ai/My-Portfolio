@@ -25,6 +25,7 @@ const TechBadge = memo(({ tech }) => (
 ));
 
 const Home = () => {
+  const contactEmail = import.meta.env.VITE_CONTACT_EMAIL || 'kyawshein8844@gmail.com';
   const [text, setText] = useState('');
   const [isTyping, setIsTyping] = useState(true);
   const [wordIndex, setWordIndex] = useState(0);
@@ -176,7 +177,7 @@ const Home = () => {
             >
               <SocialLink icon={Github} href="https://github.com/KyawShein-ai" label="GitHub" />
               <SocialLink icon={Linkedin} href="https://www.linkedin.com/in/kyaw-shein-324598400/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BMEzaE%2FYCRYuj0PvnB%2BtNHA%3D%3D" label="LinkedIn" />
-              <SocialLink icon={Mail} href="mailto:kyawshein8844@gmail.com" label="Email" />
+              <SocialLink icon={Mail} href={`mailto:${contactEmail}`} label="Email" />
             </motion.div>
           </div>
 
