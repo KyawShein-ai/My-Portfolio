@@ -4,6 +4,10 @@
   "framework": "vite",
   "rewrites": [
     {
+      "source": "/api/_supabase-connectivity-test",
+      "destination": "/api/supabase-connectivity-test"
+    },
+    {
       "source": "/((?!api/.*).*)",
       "destination": "/index.html"
     }
