@@ -12,6 +12,9 @@ const About = lazy(() => import('./pages/About'));
 const Portfolio = lazy(() => import('./pages/Portfolio'));
 const Contact = lazy(() => import('./pages/Contact'));
 const ProjectDetail = lazy(() => import('./pages/ProjectDetail'));
+const BlobClientUploadFeasibilityTest = lazy(
+  () => import('./pages/BlobClientUploadFeasibilityTest'),
+);
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 // Lazy load heavy 3D components
@@ -70,6 +73,15 @@ function App() {
           element={
             <Suspense fallback={<LoadingScreen />}>
               <ProjectDetail />
+            </Suspense>
+          }
+        />
+        {/* Temporary isolated feasibility harness — not linked from production UI */}
+        <Route
+          path="/__feasibility/blob-client-upload"
+          element={
+            <Suspense fallback={<LoadingScreen />}>
+              <BlobClientUploadFeasibilityTest />
             </Suspense>
           }
         />
